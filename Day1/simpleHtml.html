@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <link href="./externalCss.css" rel="stylesheet" />
+        <style>
+            p{
+                color: blue
+            }
+            #secondPara {
+                color:orange;
+            }
+            .yellowText {
+                color: yellowgreen;
+            }
+            b,i,u{
+                background-color: black;
+                color: white;
+            }
+            p > b{
+                color:bisque
+            }
+            p + p {
+                background-color: lightgrey;
+            }
+            [type="password"]{
+                border: 2px solid red;
+            }
+            [type="text"]:hover{
+                border: 2px solid green;
+            }
+            input:focus{
+                border: 2px solid blue;
+                background-color: lightgrey;
+            }
+            /* Task: Try First Child and last Child Pseudo Selectors */
+            .numberedList{
+                background-image: url('./sample.jpg');
+                /* background-color: rgb(226, 14, 14); */
+                color: white;
+                font-size: large;
+                font-weight: bold;
+                /* background-size: 200px 200px; */
+                background-repeat: no-repeat;
+                /* Try Background Position */
+
+                width: 300px;
+                height: 300px;
+
+                margin-left: 100px;
+                padding-top: 100px;
+                padding-left: 100px;
+
+                border: 2px solid black;
+                border-radius: 40px;
+
+                /* Try Box Shadow */
+
+            }
+            .block {
+                display: block;
+                background-color: lightblue;
+                margin: 10px;
+                padding: 10px;
+            }
+            .inline {
+                display: inline;
+                background-color: lightgreen;
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+            .inline-block {
+                display: inline-block;
+                background-color: lightcoral;
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+            /*try Visibility */
+
+            .flex-container {
+                display: flex;
+                gap: 10px;
+                background-color: lightgrey;
+                padding: 10px;
+                width: 70%;
+            }
+            .flex-item {
+                background-color: lightcoral;
+                padding: 5px;
+                width: 200px;
+                text-align: center;
+                cursor: pointer;
+
+            }
+            .flex-item:hover {
+                background-color: coral;
+            }
+            /* Try Flex Grow, Flex Shrink */
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 30px;
+                background-color: lightgrey;
+                padding: 10px;
+                width: 95%;
+            }
+            .grid-item {
+                background-color: rgb(4, 115, 151);
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            /* Try Grid Row*/
+
+            /*rem , em , vh, vw  and all other Measuring units of css and try each with atleast one style*/
+
+            /* XS, SM, MD, LG, XL XXL */
+            
+            @media screen and (max-width: 1000px) {
+                .grid-container {
+                    grid-template-columns: 1fr 1fr 1fr 1fr ;
+                }
+                
+            }
+            @media screen and (max-width: 800px) {
+                .grid-container {
+                    grid-template-columns: 1fr 1fr 1fr ;
+                }
+                
+            }
+            @media screen and (max-width: 500px) {
+                .grid-container {
+                    grid-template-columns: 1fr 1fr ;
+                }
+                
+            }
+            @media screen and (max-width: 400px) {
+                .grid-container {
+                    grid-template-columns: 1fr ;
+                }
+            }
+
+            .imgPlay:hover {
+                filter: blur(1px) brightness(50%) grayscale(100%);
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                transition: background-color 0.5s ease, transform 0.5s ease;
+            }
+            .box:hover {
+                background-color: coral;
+                transform: scale(1.2) rotate(15deg);
+            }
+            /* Try New Animation like skew, keyframes */
+            
+        </style>
+    </head>
+    <body>
+        <p style="color: red">This is my first project</p>
+        <p id="secondPara"> this is my ssecond Paragraph</p>
+        <h1>This is My Big heading</h1>
+        <h2 class="yellowText"> this is Smaller than above heading</h2>
+        <h6 class="yellowText"> I am The Smallest Heading</h6>
+        <p>I am Learning Html From Cloudverse. <br />I am Glad that I created my first Project.</p>
+        <hr />
+        <p><b>This Is Bold</b><i>This is Italic</i><u>underline</u></p>
+        <p>3<sup>2</sup><sub>4</sub></p>
+        <!-- Try 3 More defferent Text Formatting tags -->
+
+        <a href="https://www.google.com">This is a link to Google</a>
+
+        <img src="./sample.jpg" width="200" height="50" />
+        <audio controls>
+            <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" type="audio/mpeg">
+        </audio>
+        <video></video>
+        <!---- Complete this Video-->
+
+        <ol class="numberedList">
+            <li>Apple</li>
+            <li>Banana</li>
+            <ol>
+                <li>orange</li>
+                <li>grapes</li>
+            </ol>
+        </ol>
+
+        <ul>
+            <li>Onion</li>
+            <li>Tomoto</li>
+            <ul>
+                <li>Carrot</li>
+                <li>Potato</li>
+            </ul>
+            <ol>
+                <li>capsicum</li>
+                <li>cabbage</li>
+            </ol>
+        </ul>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> City </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> John </td>
+                    <td> 24 </td>
+                    <td> New York </td>
+                </tr>
+                <tr>
+                    <td> Alice </td>
+                    <td> 30 </td>
+                    <td> Los Angeles </td>
+                </tr>
+                <tr>
+                    <td> Bob </td>
+                    <td> 28 </td>
+                    <td> Chicago </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"> Thanks For Building this Table </td>
+                </tr>
+            </tfoot>
+        </table>
+        <!--- Learn and Implement RowSpan-->
+
+        <form>
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="uname" placeholder="Enter the name here" required />
+            <input type="number" name="age" />
+            <input type="password" placeholder="Enter Password Here" />
+            <input type="email" />
+            <label for="maleRB">Male</label>
+            <input type="radio" name="gender" value="m" id="maleRB" />
+            <label for="femaleRB">Female</label>
+            <input type="radio" name="gender" value="f" id="femaleRB" />
+
+            <input type="submit" value="Submit Form Now" />
+
+            <button type="sumbit">Submit the Form Now!</button>
+
+            <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </form>
+        <!-- Impelement 3 more input types with Checkbox-->
+         <progress max="100" value="90"></progress>
+         <meter max="100" min="50" value="91"></meter>
+         <details>
+            <summary>Secret Notes Here</summary>
+            I learned How to code HTML!.
+         </details>
+            <br />
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AUrLMJQf2Bw?si=-fZf6hF3fMEDyb5d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </body>
+        <h2>Block Elements</h2>
+        <div class="block">Block 1</div>
+        <div class="block">Block 2</div>
+
+        <h2>Inline Elements</h2>
+        <span class="inline">Inline 1</span>
+        <span class="inline">Inline 2</span>
+
+        <h2>Inline-Block Elements</h2>
+        <div class="inline-block">Inline-Block 1</div>
+        <div class="inline-block">Inline-Block 2</div>
+
+        <!-- Flex Box -->
+         <div>
+            <h2>Flexbox Container</h2>
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item">Item 4</div>
+                <div class="flex-item">Item 5</div> 
+            </div>
+         </div>
+
+         <!-- Grid -->
+        <div>
+            <h2>Grid Container</h2>
+            <div class="grid-container">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div> 
+                <div class="grid-item">Item 6</div>
+            </div>
+         </div>
+
+         <div>
+            <h2>Visibility Hidden Example</h2>
+            <p>This paragraph is visible.</p>
+            <p style="visibility: hidden;">This paragraph is hidden but still takes up space.</p>
+            <p>This paragraph is also visible.</p>
+        </div>
+
+        <img src="./sample.jpg" alt="Sample Image" width="500" height="500" class="imgPlay"/>
+        <div class="box"></div>
+    </body>
+</html>
