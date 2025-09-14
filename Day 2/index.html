@@ -1,0 +1,404 @@
+<html>
+    <body>
+        <h1 id="checkDom"> Welcome to Cloudverse</h1>
+        <p class="domCheck">This is JS episode</p>
+        <button onclick="change()">Hello</button>
+        <button id="event">event</button>
+        <input id="ev">
+        <script>
+            // alert("Hi");
+            console.log("Js is working")
+            
+
+            let str="Hello";
+            let num = 23;
+            let isTrue=true;
+            let empty=null;
+            let notDefined;
+
+            console.log(str, typeof str)
+            console.log(num, typeof num)
+            console.log(isTrue, typeof isTrue)
+            console.log(empty, typeof empty)
+            console.log(notDefined, typeof notDefined)
+
+
+            let id = {name: "Cloudverse", id:1}
+            let even = [2,4,6,8,10]
+
+            console.log(id, typeof id, id.name, id.id)
+            console.log(even, typeof even, even[2])
+
+            let a = 5
+            let b = 3
+
+            console.log(a+b);
+            console.log(a-b)
+            console.log(a*b)
+            console.log(a/b)
+            console.log(a%b)
+            console.log(a**b)
+
+            let x = 5
+            console.log(x)
+            x+=1;
+            console.log(x)
+            x-=1;
+            console.log(x)
+
+            let y="5"
+            let z=5
+
+            console.log(y==z);
+            console.log(y===z);
+            console.log(y!=z);
+            console.log(y!==z);
+            console.log(10 > 5);
+            console.log(10<5);
+            // try other Comparision Operators
+
+            let i=true;
+            let j = false;
+            console.log(i&&j)
+            console.log(i||j);
+            console.log(!j)
+
+            let age = 17;
+            let canVote = age >= 18 ? true : false;
+
+            console.log(canVote);
+
+            let marks = 98
+
+            if(marks > 95) {
+                console.log('Grade A')
+            } else if(marks > 60) {
+                console.log("Grade B")
+            } else {
+                console.log("Grade C")
+            }
+
+            if(marks > 90) {
+                console.log("First Class");
+                if(marks > 97) {
+                    console.log("Grade O")
+                } else {
+                    console.log("Grade A")
+                }
+            } else {
+                console.log("Second Class")
+                if(marks > 80) {
+                    console.log("Grade B")
+                } else if(marks > 60) {
+                    console.log("Grade C")
+                } else {
+                    console.log ("Grade E")
+                }
+            }
+
+            let signal = "Red"
+
+            switch(signal) {
+                case "Red":
+                    console.log("Stop");
+                    break;
+                case "Yellow":
+                    console.log("Slow");
+                    break;
+                case "Green":
+                    console.log("Go");
+                    break;
+                default:
+                    console.log("Unknown Color");
+                    break;
+            }
+
+            for (let init=1; init<=10; init++){
+                console.log(init)
+            }
+
+            let init2=0
+
+            while (init2 <= 3) {
+                console.log(init2)
+                init2++;
+            }
+
+            let init3=0
+
+            do {
+                console.log(init3)
+                init3++;
+            } while (init3 <= 3)
+
+            let arr = ["a", "b", "c"];
+
+            for(let val of arr) {
+                console.log(val)
+            }
+
+            let obj = {
+                name: "Cloudverse",
+                id: 1
+            }
+
+            for(let key in obj) {
+                console.log(key, obj[key])
+            }
+
+            function greet(name) {
+                return "Hello "+name
+            }
+
+            console.log(greet("Alice"))
+
+            let greet2 = (name) => {
+                return "Hi "+name
+            }
+
+            console.log(greet2("John"))
+
+            function add (a = 5, b=7) {
+                return a+b
+            }
+            console.log(add(4,5))
+            console.log(add())
+            
+            if(true) {
+                var globalVar = "I am Accessible Anywhere";
+                let localVar = "I am Accessible only inside the block"
+                localVar = "I am Accessible only inside the block({})"
+                const unchange = "I cannot be changed and I  am Accessible only inside the block"
+                // unchange="Changed"; // This will throw error
+            }
+            console.log(globalVar);
+            // console.log(localVar) // This will throw error
+
+            //Hoisting
+
+            sayHello();
+
+            function sayHello() {
+                console.log("Saying hello");
+            }
+
+            //task: Check How var hoisting
+
+            // console.log(letHoisting) // this will throw error
+            let letHoisting = "Hositing the let"
+
+            let myObj = {
+                name: "Alice",
+                id: 1,
+                course: "Cloudverse AIFS",
+                greet: function() {
+                    return "Hi " + this.name
+                }
+            }
+
+            let dynamicKey = "course"
+
+            console.log(myObj.name) // Dot Notation
+            console.log(myObj["name"]) // bracket Notation
+            console.log(myObj[dynamicKey]) // 
+            console.log(myObj.greet())
+
+            let {name , course} = myObj;
+            console.log(name, course)
+            
+            console.log(Object.keys(myObj))
+            console.log(Object.values(myObj))
+            console.log(Object.entries(myObj))
+
+            //array
+
+            let myArr = ["apple", "banana", "cherry", "mango", "grape"];
+
+            console.log(myArr[4], myArr.length)
+
+
+            myArr.pop();
+            myArr.push("strawberry");
+            myArr.shift();
+            myArr.unshift("Orange")
+
+            console.log(myArr)
+
+            console.log(myArr.slice(1, 3))
+
+            console.log(myArr.splice(1, 3, "avacado", "water melon"))
+
+            console.log(myArr)
+
+            let Arr = [2,4,6,8,10];
+
+            console.log(Arr.map(function (item) {
+                return item +3
+            }))
+            console.log(Arr.filter(function (ele) {
+                return ele > 6
+            }))
+            console.log(Arr.reduce(function(ele, prevValue) {
+                return ele + prevValue
+            }))
+            console.log(Arr.forEach(function(ele) {
+                console.log(ele);
+            }))
+
+            console.log(Arr, "original")
+
+            console.log(Arr.find(function (i) {
+                return i < 10
+            }))
+            console.log(Arr.findIndex(function (i) {
+                return i === 8
+            }))
+            console.log(Arr.includes(9))
+            console.log(Arr.some(function(i){
+                 return i >=10
+            }))
+            console.log(Arr.every(function (i) {
+                return i >= 2
+            }))
+
+            let [fruit1, fruit2] = myArr;
+            
+            console.log(fruit1, fruit2, myArr)
+
+            let fr = ["butter fruit", "dragon fruit"];
+
+            let newFruit = [...myArr, ...fr]
+
+            console.log(newFruit);
+
+
+            // Strings
+
+            let name1 = "CB"
+            let name2 = "John"
+            let name3 = "Alice"
+
+            console.log("Hello " + name1 + ", " + name2 + " and " + name3)
+            console.log(`Hello ${name1}, ${name2} and ${name3}`)
+
+            let str2 = "Cloudverse"
+
+            console.log(str2.length);
+            console.log(str2.toUpperCase());
+            console.log(str2.toLowerCase())
+            console.log(str2.charAt(5))
+            console.log(str2.indexOf("o"))
+
+            //DOM - Document Object Model
+            console.log(document.getElementById("checkDom"))
+            document.getElementById("checkDom").innerHTML = "This is Changed"
+
+            console.log(document.getElementsByClassName("domCheck")[0].innerHTML = "Working")
+
+            let newEl = document.createElement("p");
+            newEl.textContent = "New paragraph tag";
+            document.body.appendChild(newEl);
+
+            //event
+            document.getElementById("event").addEventListener("click", function(){
+                alert("Hello World");
+            })
+
+            document.getElementById("ev").addEventListener("keyup", function(event){
+                alert("Key Pressed")
+                console.log(event)
+            })
+
+            //callback
+            var asyVar = "Hello";
+            asyVar = "World";
+            // console.log(asyVar);
+
+            // setTimeout(function () {
+            //     asyVar = "Cloudverse";
+            //     console.log(asyVar, "Inside timeout")
+            // }, 2000)
+            
+            // console.log("This is after setTimeout", asyVar)
+
+
+            // function callbackExample(callback) {
+            //     setTimeout(function () {
+            //         asyVar = "Cloudverse2";
+            //         console.log(asyVar, "Inside timeout")
+            //         callback();
+
+            //     }, 2000)
+            // }
+
+            // callbackExample(function(cb2 ) {
+            //     console.log("This is after setTimeout", asyVar)
+            // })
+
+            //callback hell
+
+            // function t1(cb, nextCb) {
+            //     setTimeout(function () {
+            //         console.log("t1")
+            //         cb(nextCb);
+            //     }, 3000)
+            // }
+
+            // function t2(cb) {
+            //     setTimeout(function() {
+            //         console.log("t2")
+            //         cb()
+            //     }, 2000)
+            // }
+
+            // function t3 () {
+            //     setTimeout(function() {
+            //         console.log("t3")
+            //     }, 1000)
+            // }
+
+            // t1(t2, t3);
+
+            //Promise
+
+
+            function t1() {
+                return new Promise(function(resolve, reject) {
+                    setTimeout(function () {
+                        console.log("t1")
+                        resolve();
+                    }, 10000)
+                })
+            }
+
+            function t2() {
+                setTimeout(function() {
+                    console.log("t2")
+                }, 2000)
+            }
+
+            // t1().then(function() {
+            //     t2();
+            // }).catch(function () {
+            //     console.log("There is a error")
+            // }).finally(function () {
+            //     console.log("I will execucte for both the conditions")
+            // })
+
+            // async await
+
+            async function asyAwaExample() {
+                await t1();
+                t2();
+                console.log("asdf")
+            }
+
+            asyAwaExample();
+            
+
+
+
+        </script>
+        <script src="./script.js"></script>
+    </body>
+</html>
