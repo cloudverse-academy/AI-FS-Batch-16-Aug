@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Education Purpose</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black text-white">
+    <nav class="flex items-center justify-between px-4 py-4 top-0 fixed w-full bg-black z-10">
+        <h1 class="font-bold text-2xl text-red-600">NETFLIX</h1>
+        <button class="bg-gray-800 px-4 py-2 rounded hover:bg-gray-700" id="toggleBtn">Toggle Dark Mode</button>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center justify-center">
+        <div class="text-center p-8 bg-black bg-opacity-60 ">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 ">Unlimited movies, TV shows and more</h1>
+            <p class="text-lg mb-4">Watch anywhere. Cancel anytime.</p>
+            <input type="email" class="text-black bg-white rounded p-3 w-64 md:w-96" placeholder="Email Address">
+            <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded ml-2 font-semibold">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Trending Section-->
+    <section class="px-6 py-12">
+        <h2 class="font-bold mb-4 text-2xl">Trending Now</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        </div>
+    </section>
+
+    <!-- Popular Section-->
+    <section class="px-6 py-12">
+        <h2 class="font-bold mb-4 text-2xl">Popular On Netflix</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        <img src="https://placehold.co/200x130" />
+        </div>
+    </section>
+    </section>
+
+    <footer class="text-center py-6 text-gray-400 bg-black">
+        <p>Netflix Clone Project • Made with ❤️ using HTML, Tailwind CSS & JS</p>
+    </footer>
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+        const toggleBtn = document.getElementById("toggleBtn");
+
+        toggleBtn.addEventListener("click", function(){
+            body.classList.toggle("bg-black")
+            body.classList.toggle("bg-white")
+            body.classList.toggle("text-black")
+            body.classList.toggle("text-white")
+
+
+        })
+    </script>
+</body>
+</html>
